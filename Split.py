@@ -13,3 +13,4 @@ def split(imgs):
 loc = "E:\\Kanishka\\Full_DataWCT\\*.png"
 #img = cv2.imread('000217.png')
 split(loc)
+#Reference: https://stackoverflow.com/a/53756054/19294274
