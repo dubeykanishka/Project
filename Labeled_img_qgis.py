@@ -72,7 +72,7 @@ def prepareMap():  # Arrange layers
             pass
 
 
-def exportMap():  # Save the map as a PNG
+def exportMap():  # Save map as an image
     try:
         global count  #to modify the value of count
         if count < len(otherLayers):
@@ -84,5 +84,5 @@ def exportMap():  # Save the map as a PNG
         pass
 
 
-prepareMap()  # Let's start the fun
+prepareMap() #Ready to go :)
 #Reference Link: https://data.library.virginia.edu/how-to-create-and-export-print-layouts-in-python-for-qgis-3/
