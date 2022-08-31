@@ -92,3 +92,4 @@ def exportMap():  # Save the map as a PNG
 
 
 prepareMap()  # Let's start the fun
+#Reference Link: https://data.library.virginia.edu/how-to-create-and-export-print-layouts-in-python-for-qgis-3/
