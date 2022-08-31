@@ -3,8 +3,6 @@ from PyQt5.QtCore import QTimer
 
 # exported is a prefix for the file names
 fileName = 'E:\\Kanishka\\FullData_queens_CT\\'
-#boundaryLayer = QgsProject.instance().mapLayersByName('Cooling_Tower')[0]
-#QgsProject.instance().layerTreeRoot().findLayer(boundaryLayer.id()).setItemVisibilityChecked(True)
 print('started')
 otherLayers = []
 for layer in QgsProject.instance().mapLayers().values():
@@ -54,15 +52,10 @@ def prepareMap():  # Arrange layers
                 map.setRect(20, 20, 20, 20)
 
                 # set the map extent
-                #ms = QgsMapSettings()
-                #ms.setLayers([layer, boundaryLayer]) # set layers to be mapped
                 rect = QgsRectangle(layer.extent())
-                #ms.setExtent(rect)
                 map.setExtent(rect)
-                #map.setBackgroundColor(QColor(255, 255, 255, 0))
                 layout.addLayoutItem(map)
 
-                #map.attemptMove(QgsLayoutPoint(0, 0, QgsUnitTypes.LayoutMillimeters))
                 map.attemptResize(QgsLayoutSize(423.333, 423.333,
                                                 QgsUnitTypes.LayoutMillimeters))
 
@@ -81,7 +74,7 @@ def prepareMap():  # Arrange layers
 
 def exportMap():  # Save the map as a PNG
     try:
-        global count  # We need this because we'll modify its value
+        global count  #to modify the value of count
         if count < len(otherLayers):
             QTimer.singleShot(2000, prepareMap)
         count += 1
