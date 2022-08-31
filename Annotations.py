@@ -49,3 +49,19 @@ def boundingBox(path):
       
 path1 = "D:\\masked\\*.png"
 boundingBox(path1)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Reference Link: https://stackoverflow.com/questions/69957402/get-bounding-box-coordinates-xywh-from-quad-coordinates-and-normalize-them
