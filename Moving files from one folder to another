@@ -1,0 +1,33 @@
+import os
+import shutil
+
+#Location of the area folder
+File_dir = r"D:\\UCC\\Project\\boro_bronx_sp18\\"
+#Location to which you want to move the .jp2 files
+target_dir = r"D:\\UCC\\Project\\bronx_2018_jp2\\"
+
+lst = []
+if os.path.isdir(File_dir):  #Checks whether the given path is correct or not
+        for root, dirs, files in os.walk(File_dir):
+            for name in files:
+                if name.endswith((".jp2")):
+                    #create current name using file name and path
+                    old_name = os.path.join(File_dir, name)
+                    #creating filename without extension
+                    file_name = os.path.splitext(name)[0]
+                    #New name with extension boronx 
+                    new_ext = 'boronx_' + file_name + '.jp2'
+                    #Joining file path and new extension
+                    new_name = os.path.join(File_dir, new_ext)
+                    
+                    # Renaming the file
+                    os.rename(old_name, new_name)
+			 #append the list with the new file extension
+                    lst.append(new_ext)
+            #print(lst)
+            for file_p in lst:
+                source = File_dir + file_p
+                destination = target_dir + file_p
+                # move file from source to destination
+                shutil.move(source, destination)
+                print('Moved:', file_p)
