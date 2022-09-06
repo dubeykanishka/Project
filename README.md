@@ -1,4 +1,4 @@
-# Project
+# Project - "Automated detection of Cooling Towers applying Deep Learning to Orthophotos Images"
 The project aims to build a deep learning
 model for the automatic detection of air conditioning cooling towers in
 New York region using a time series database of orthophotos and a training
