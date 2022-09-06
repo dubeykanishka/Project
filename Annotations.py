@@ -1,3 +1,5 @@
+#To fetch the coordnates of the bounding box from an image
+
 import numpy as np
 from PIL import Image
 import glob
