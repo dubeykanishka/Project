@@ -17,3 +17,4 @@ on the chosen model. It can be seen that YOLOv5s6 with the optimized
 dataset greatly improves the detection accuracy.
 
 Code: https://github.com/dubeykanishka/Project/blob/main/coolingtowerdetectionusingyolo.ipynb
+#RANDBEE CONSULTANTS
