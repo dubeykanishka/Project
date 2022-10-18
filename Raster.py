@@ -6,7 +6,6 @@ layers = [layer for layer in QgsProject.instance().mapLayers().values() if layer
 pipe = QgsRasterPipe()
 count = 0
 for layer in layers:
-    #idx = layer.dataProvider().handlePostCloneOperations(source=QgsVectorDataProvider)
     pipe.set(layer.dataProvider().clone())
     pipe.set(layer.renderer().clone())
     output_path = os.path.join(myDir, '{}.png'.format(layer.name()))
