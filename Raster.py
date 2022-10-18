@@ -11,3 +11,5 @@ for layer in layers:
     output_path = os.path.join(myDir, '{}.png'.format(layer.name()))
     file_writer = QgsRasterFileWriter(output_path)
     file_writer.writeRaster(pipe, layer.width(), layer.height(), layer.extent(), layer.crs(), project.transformContext())
+
+#Reference: https://gis.stackexchange.com/questions/371586/batch-export-rasters-as-rendered-images
