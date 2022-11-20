@@ -2,7 +2,7 @@ import cv2
 import glob
 
 def split(imgs):
-    count = 6450
+    count = 0
     for filename in glob.glob(imgs):
         img = cv2.imread(filename, 1)
         for r in range(0,img.shape[0],1000):
